@@ -1,0 +1,22 @@
+/* ## Content Block
+--------------------------------------------- */
+
+.content-block {
+  z-index:10;
+
+  &.content-block--image-left {
+    img {
+      position:relative;
+      top:-50px;
+      margin-bottom:-50px;
+    }
+  }
+
+  &.content-block--image-right {
+    img {
+      position:relative;
+      top:-80px;
+      margin-bottom:-80px;
+    }
+  }
+}

@@ -2,12 +2,14 @@
 //===================
 $white: #fff;
 $black: #000;
-$red: #000;
+$red: #511414;
 $gray--lightest: #ccc;
 $gray--lighter: #eee;
 $gray--light: #ddd;
 $gray--medium: #777;
 $gray: #333;
+$red-gradient: linear-gradient( 180deg, #23191C, #511414);
+$yellow: #DFBA68;
 
 //
 // Color Configuration
@@ -25,7 +27,7 @@ $input--background-color: $white;
 $input--border-color: $gray--light;
 $input--color: $gray;
 $input--focus-border-color: $gray--light;
-$button--background-color: $gray;
+$button--background-color: $red-gradient;
 $button--color: $white;
 $button--hover-background-color: $red;
 $button--hover-color: $white;
@@ -35,20 +37,20 @@ $button--disable-color: $gray--medium;
 //
 // Header
 //======================
-$site-header--background-color: $white;
+$site-header--background-color: $red-gradient;
 $site-title--link-color: $gray;
 
 //
 // Navigation
 //============================
-$nav--link-color: $gray;
-$nav--hover-color: $red;
-$submenu--border-color: $gray--lighter;
-$submenu--link-background-color: $white;
+$nav--link-color: $white;
+$nav--hover-color: $white;
+$submenu--border-color: $white;
+$submenu--link-background-color: $yellow;
 
 $primary-nav--background-color: $white;
 $primary-nav--border-color: $gray--lighter;
-$primary-nav--link-color: $nav--link-color;
+$primary-nav--link-color: $white;
 
 $secondary-nav--background-color: $white;
 $secondary-nav--border-color: $gray--lighter;
@@ -69,7 +71,7 @@ $archive-pagination--hover-color: $white;
 //
 // Footer
 //============================
-$siteFooter--background-color: $white;
+$siteFooter--background-color: #23191C;
 $site-footer--border-color: $gray--lighter;
 $footer-widgets--background-color: $white;
 

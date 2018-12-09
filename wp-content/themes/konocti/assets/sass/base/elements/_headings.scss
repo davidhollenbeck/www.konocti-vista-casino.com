@@ -15,10 +15,14 @@ h6 {
 
 h1 {
   @include rem( font-size, $h1--font-size );
+  color:$white;
+  text-shadow:7px 7px 0 #511414;
+  text-transform:uppercase;
 }
 
 h2 {
   @include rem( font-size, $h2--font-size );
+  color:$red;
 }
 
 h3 {
@@ -35,4 +39,12 @@ h5 {
 
 h6 {
   @include rem( font-size, $h6--font-size );
+}
+
+.subheadline {
+  color:#511414;
+  font-family:$font-family--museo;
+  font-weight:700;
+  @include rem( font-size, $h3--font-size );
+
 }

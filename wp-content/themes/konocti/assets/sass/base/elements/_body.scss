@@ -4,7 +4,8 @@ html {
 }
 
 body {
-  background-color: $body--background-color;
+  background-image: url(assets/images/pipes.png);
+  background-size:contain;
   color: $base__color;
   font-family: $base--font-family;
   @include rem( font-size, $base--font-size );

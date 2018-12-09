@@ -25,11 +25,22 @@
     text-align: left;
   }
 
+  .make-reservation {
+    background-color:$yellow;
+    margin-left:15px;
+    padding-left:40px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 19% 50%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 19% 50%);
+  }
+
   a {
     color: $nav--link-color;
     text-decoration: none;
     display: block;
-    padding: 32px 20px;
+    padding: 45px 20px;
+    font-family:$font-family--futura;
+    font-weight:600;
+    text-transform:uppercase;
   }
 
   a:hover,
@@ -85,5 +96,11 @@
 
   > .right {
     float: right;
+  }
+
+  @media screen and (max-width:1380px) {
+    a {
+      padding:45px 10px;
+    }
   }
 }
