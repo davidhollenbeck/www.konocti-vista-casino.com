@@ -42,18 +42,23 @@
       }
     }
 
+    .nav-primary {
+      display:none;
+    }
+
     .nav-primary, .site-header {
       .genesis-nav-menu .menu-item {
         display: block;
         float: none;
-        margin: 1px 0;
         position: relative;
         text-align: left;
 
         a {
           border: none;
-          padding: 12px 0;
+          padding: 12px 5px;
           width: 100%;
+          color:$white;
+          background-color:$yellow;
         }
       }
     }

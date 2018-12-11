@@ -23,7 +23,6 @@ function unregister_menu_callbacks() {
 }
 
 // Reposition the secondary navigation menu
-add_action( 'genesis_footer', 'genesis_do_subnav', 5 );
 
 add_action('genesis_header_right', 'genesis_do_nav');
 

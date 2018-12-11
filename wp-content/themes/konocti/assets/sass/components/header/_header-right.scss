@@ -7,10 +7,24 @@
   width: $header-right--width;
 
   @media only screen and (max-width: 1340px) {
-    width: $header-right--width-large-screen;
+    width: 740px;
   }
 
   @media only screen and (max-width: 1023px) {
-    width: 100%;
+    width:auto;
+    display:inline-block;
+    position: absolute;
+    right: 50px;
+    z-index: 20;
+
+    .wrap {
+      padding:0;
+    }
+
+    .menu-toggle {
+      background:none;
+      color:#fff;
+      margin-top:30px;
+    }
   }
 }

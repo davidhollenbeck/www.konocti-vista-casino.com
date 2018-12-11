@@ -29,8 +29,18 @@
     background-color:$yellow;
     margin-left:15px;
     padding-left:40px;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 19% 50%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 19% 50%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 19% 50%);
+
+    @include media( $breakpoint__screen-size--larger ) {
+      margin-left:0;
+    }
+
+    @include media( $breakpoint__screen-size--medium ) {
+      padding-left:0;
+      clip-path: none;
+      -webkit-clip-path: none;
+    }
   }
 
   a {
@@ -101,6 +111,12 @@
   @media screen and (max-width:1380px) {
     a {
       padding:45px 10px;
+    }
+  }
+
+  @media screen and (max-width:1160px) {
+    a {
+      padding: 45px 5px;
     }
   }
 }

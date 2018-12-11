@@ -16,4 +16,56 @@
   a {
     color:#fff;
   }
+
+  @include media($breakpoint__screen-size--small) {
+    .wrap {
+      max-width:300px;
+    }
+  }
+}
+
+.above-footer {
+  background:$red-gradient;
+  text-align:center;
+  padding-top:15px;
+  @include media($breakpoint__screen-size--small) {
+  .genesis-nav-menu {
+
+    margin-top:50px;
+    margin-bottom:50px;
+
+    .menu-item {
+
+        display:block;
+        text-align:center;
+
+        a {
+          padding:10px;
+        }
+      }
+    }
+  }
+
+  .footer-section {
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  a {
+    color:$white;
+  }
+
+  p {
+    color:$white;
+  }
+
+  h2 {
+    color:$white;
+    text-transform:uppercase;
+  }
+
+  i {
+    margin-left:15px;
+    margin-right:15px;
+  }
 }
