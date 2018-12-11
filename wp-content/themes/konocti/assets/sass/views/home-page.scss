@@ -3,4 +3,10 @@
 
 .home-content-block {
   margin-top:50px;
+
+  @include media($breakpoint__screen-size--small) {
+    img {
+      display: none;
+    }
+  }
 }

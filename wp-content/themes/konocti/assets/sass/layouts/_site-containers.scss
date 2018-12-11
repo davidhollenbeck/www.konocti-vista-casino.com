@@ -7,14 +7,14 @@
   max-width: $max-width;
 
   @include media( $breakpoint__screen-size--larger ) {
-    max-width: $max-width-larger-screen;
+    max-width: 100%;
   }
    @include media( $breakpoint__screen-size--large ) {
-    max-width: $max-width-large-screen;
+     max-width: 100%;
   }
 
    @include media( $breakpoint__screen-size--medium ) {
-    max-width: $max-width--medium-screen;
+     max-width: 100%;
   }
 }
 
@@ -43,4 +43,10 @@
 
 .row--padding {
   padding:15px 60px;
+}
+
+@include media( $breakpoint__screen-size--medium ) {
+  .row--padding {
+    padding:15px 30px;
+  }
 }

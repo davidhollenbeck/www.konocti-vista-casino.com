@@ -57,4 +57,16 @@
     transform: translateY(-70%);
     padding:60px;
   }
+
+  @include media($breakpoint__screen-size--smaller) {
+
+    .slide__text-container {
+      padding:30px;
+    }
+  }
+  @include media($breakpoint__screen-size--small) {
+    .slider__logo {
+      max-width:100%;
+    }
+  }
 }

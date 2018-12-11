@@ -13,3 +13,5 @@ $breakpoint__screen-size--medium: new-breakpoint(max-width $screen-size--medium 
 
 //@media only screen and (max-width: 860px) {
 $breakpoint__screen-size--small: new-breakpoint(max-width $screen-size--small 4);
+
+$breakpoint__screen-size--smaller: new-breakpoint(max-width 600px 4);

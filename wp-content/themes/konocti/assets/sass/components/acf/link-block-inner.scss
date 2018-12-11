@@ -5,6 +5,7 @@
   display:flex;
   flex-wrap:wrap;
   margin-top:50px;
+  padding:0 30px;
 
   .link-block-inner__block {
     position:relative;
@@ -35,6 +36,13 @@
   h2 {
     padding:10px 30px;
     text-transform:uppercase;
+  }
+
+  @include media($breakpoint__screen-size--small) {
+    padding:0 30px;
+    max-width:500px;
+    margin-left:auto;
+    margin-right:auto;
   }
 }
 

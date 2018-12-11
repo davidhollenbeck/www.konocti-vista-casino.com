@@ -18,6 +18,10 @@ h1 {
   color:$white;
   text-shadow:7px 7px 0 #511414;
   text-transform:uppercase;
+
+  @include media($breakpoint__screen-size--medium) {
+    @include rem( font-size, 70px );
+  }
 }
 
 h2 {
@@ -47,4 +51,20 @@ h6 {
   font-weight:700;
   @include rem( font-size, $h3--font-size );
 
+}
+
+@include media($breakpoint__screen-size--smaller) {
+  h1 {
+    @include rem( font-size, 50px );
+    text-shadow:4px 4px 0 #511414;
+    text-transform:uppercase;
+  }
+
+  h2 {
+    @include rem( font-size, 36px );
+  }
+
+  .subheadline {
+    @include rem( font-size, 18px );
+  }
 }
