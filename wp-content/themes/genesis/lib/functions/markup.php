@@ -438,11 +438,36 @@ add_filter( 'genesis_attr_breadcrumb', 'genesis_attributes_breadcrumb' );
  */
 function genesis_attributes_breadcrumb( $attributes ) {
 
+	// Homepage breadcrumb content contains no links, so no schema.org attributes are needed.
+	if ( is_home() ) {
+		return $attributes;
+	}
+
+	// Omit attributes if generic breadcrumb functions are in use.
+	if ( function_exists( 'breadcrumbs' ) || function_exists( 'crumbs' ) ) {
+		return $attributes;
+	}
+
+	// Breadcrumb NavXT plugin needs RDFa attributes on the breadcrumb wrapper.
+	if ( function_exists( 'bcn_display' ) ) {
+		$attributes['typeof'] = 'BreadcrumbList';
+		$attributes['vocab']  = 'https://schema.org/';
+		return $attributes;
+	}
+
+	// Yoast SEO uses JSON-LD and Yoast Breadcrumbs emits no schema.org markup, so no attributes needed.
+	$yoast_seo_breadcrumbs_enabled    = class_exists( 'WPSEO_Breadcrumbs' ) && genesis_get_option( 'breadcrumbs-enable', 'wpseo_titles' );
+	$yoast_breadcrumbs_plugin_enabled = function_exists( 'yoast_breadcrumb' ) && ! class_exists( 'WPSEO_Breadcrumbs' );
+
+	if ( $yoast_seo_breadcrumbs_enabled || $yoast_breadcrumbs_plugin_enabled ) {
+		return $attributes;
+	}
+
+	// Genesis breadcrumbs require microdata on the wrapper.
 	$attributes['itemprop']  = 'breadcrumb';
 	$attributes['itemscope'] = true;
 	$attributes['itemtype']  = 'https://schema.org/BreadcrumbList';
 
-	// Breadcrumb itemprop not valid on blog.
 	if ( is_singular( 'post' ) || is_archive() || is_home() || is_page_template( 'page_blog.php' ) ) {
 		unset( $attributes['itemprop'] );
 	}
@@ -655,8 +680,9 @@ add_filter( 'genesis_attr_search-form-input', 'genesis_attributes_search_form_in
  */
 function genesis_attributes_search_form_input( $attributes, $context, $args ) {
 
-	$attributes['type'] = 'search';
-	$attributes['name'] = 's';
+	$attributes['type']     = 'search';
+	$attributes['itemprop'] = 'query-input';
+	$attributes['name']     = 's';
 
 	foreach ( array( 'id', 'value', 'placeholder' ) as $param ) {
 		if ( isset( $args['params'][ $param ] ) ) {

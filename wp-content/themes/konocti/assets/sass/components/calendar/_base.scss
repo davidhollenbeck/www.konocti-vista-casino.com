@@ -11,7 +11,7 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: "Satellite", "Roboto", sans-serif;
+  //font-family: "Satellite", "Roboto", sans-serif;
   border: 1px solid rgba(21, 21, 21, 0.12);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -45,7 +45,7 @@
 }
 
 .cjslib-year {
-  width: calc(100% - 10px);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,6 +58,7 @@
   justify-content: center;
   padding: 5px;
   font-size: 14px;
+  background-color: $yellow !important;
 }
 
 .cjslib-year {
@@ -77,6 +78,12 @@
     -ms-flex-align: center;
     align-items: center;
     text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-family: "futura-pt-condensed", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-style: italic;
   }
 
   > div {
@@ -92,12 +99,21 @@
     align-items: center;
     -ms-flex-line-pack: center;
     align-content: center;
+    text-decoration: none;
+    font-family: "futura-pt-condensed", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-style: italic;
+
+    svg {
+      fill:#fff !important;
+    }
   }
 }
 
 .cjslib-month {
   z-index: 1;
-  width: calc(100% - 10px);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,6 +128,10 @@
   font-size: 40px;
   -webkit-box-shadow: 0px 1px 4px rgba(21, 21, 21, 0.12);
   box-shadow: 0px 1px 4px rgba(21, 21, 21, 0.12);
+  background:$red-gradient !important;
+  font-family: "futura-pt-condensed", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .cjslib-month {
@@ -146,6 +166,10 @@
     align-items: center;
     -ms-flex-line-pack: center;
     align-content: center;
+
+    svg {
+      fill:#fff;
+    }
   }
 }
 
@@ -177,6 +201,9 @@
     -ms-flex-align: center;
     align-items: center;
     padding: 10px;
+    font-family: "futura-pt-condensed", sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
   }
 }
 
@@ -351,7 +378,7 @@
 .cjslib-events {
   width: 800px;
   height: 800px;
-  font-family: "Satellite", "Roboto", sans-serif;
+  //font-family: "Satellite", "Roboto", sans-serif;
   -webkit-box-shadow: 0px 0px 4px rgba(21, 21, 21, 0.21);
   box-shadow: 0px 0px 4px rgba(21, 21, 21, 0.21);
   border: 1px solid rgba(21, 21, 21, 0.12);
@@ -386,7 +413,7 @@
 }
 
 .cjslib-date {
-  width: calc(100% - 10px);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

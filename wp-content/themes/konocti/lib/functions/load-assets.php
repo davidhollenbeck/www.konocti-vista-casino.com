@@ -26,7 +26,7 @@ function enqueue_assets() {
 	wp_enqueue_style( CHILD_TEXT_DOMAIN . '-fa-brands', '//use.fontawesome.com/releases/v5.5.0/css/brands.css', array(), CHILD_THEME_VERSION );
 
 	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-responsive-menu', CHILD_URL . '/assets/js/responsive-menu.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
-    wp_enqueue_script( CHILD_TEXT_DOMAIN . '-calendar-lib', CHILD_URL . '/assets/js/calendarorganizer.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+    wp_enqueue_script( CHILD_TEXT_DOMAIN . '-calendar-lib', CHILD_URL . '/assets/js/calendarorganizer.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
     wp_enqueue_script( CHILD_TEXT_DOMAIN . '-calendar-init', CHILD_URL . '/assets/js/calendar.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
 	$localized_script_args = array(

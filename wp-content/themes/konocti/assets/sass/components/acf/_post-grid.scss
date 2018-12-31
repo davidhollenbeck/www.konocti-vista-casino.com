@@ -1,0 +1,51 @@
+/* ## Post Grid
+--------------------------------------------- */
+
+.post-grid {
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:50px;
+  padding:0 30px;
+
+  .post-grid__block {
+    position:relative;
+    text-align:center;
+    margin-bottom:50px;
+    background-color:#fff;
+    border:2px solid $red;
+  }
+
+  .post-grid__date-box {
+    position:absolute;
+    top:0;
+    right:0;
+    width:80px;
+    height:80px;
+    color:#fff;
+    background-color:$red;
+    border:1px solid #fff;
+
+    .post-grid__date {
+      @include rem(font-size, 30px);
+      font-style:initial;
+      margin:0;
+    }
+
+    h6 {
+      margin:0;
+    }
+  }
+
+  h4.date {
+    margin:0;
+  }
+
+  .button {
+
+    width:130px;
+    text-align:center;
+    margin-top:25px;
+    margin-bottom:25px;
+    display:inline-block;
+  }
+}

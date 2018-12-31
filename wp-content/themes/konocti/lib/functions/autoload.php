@@ -48,8 +48,10 @@ function load_nonadmin_files() {
         'components/markup/parallax_block.php',
         'components/markup/slider.php',
         'components/markup/content_block.php',
+        'components/markup/hero.php',
+        'components/markup/post_grid.php',
         'components/calendar/calendar.php',
-        'components/calendar/json.php',
+        //'components/calendar/json.php',
 	);
 
 	load_specified_files( $filenames );

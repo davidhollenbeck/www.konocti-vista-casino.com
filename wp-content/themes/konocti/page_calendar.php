@@ -19,8 +19,8 @@ add_action('genesis_before_loop', __NAMESPACE__ . '\load_calendar_page', 1);
 
 function load_calendar_page() {
     ?>
-    <div id="calendarContainer"></div>
-    <div id="organizerContainer"></div>
+        <div id="calendarContainer"></div>
+        <div id="organizerContainer"></div>
     <?php
 }
 

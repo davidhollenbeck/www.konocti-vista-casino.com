@@ -38,7 +38,9 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.button {
+.button,
+.woocommerce button.button,
+.woocommerce button.button.alt {
   background: $red-gradient;
   border: 0;
   color: $button--color;
@@ -51,6 +53,7 @@ input[type="submit"],
   width: auto;
   font-family: $font-family--futura;
   text-transform: uppercase;
+  font-style:italic;
 }
 
 button:hover,
@@ -58,10 +61,14 @@ input:hover[type="button"],
 input:hover[type="reset"],
 input:hover[type="submit"],
 .button:hover,
+.woocommerce button.button:hover,
+.woocommerce button.button.alt:hover,
 button:focus,
 input:focus[type="button"],
 input:focus[type="reset"],
 input:focus[type="submit"],
+.woocommerce button.button:focus,
+.woocommerce button.button.alt:focus,
 .button:focus  {
   background-color: $button--hover-background-color;
   color: $button--hover-color;
