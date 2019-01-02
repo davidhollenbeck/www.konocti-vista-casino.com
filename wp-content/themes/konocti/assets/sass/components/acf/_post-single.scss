@@ -1,0 +1,47 @@
+/* ## Post Single
+--------------------------------------------- */
+
+/* ## WooCommerce
+--------------------------------------------- */
+
+.single-promotion .site-container, .single-event .site-container {
+
+  img {
+    max-width:100%;
+  }
+
+  .entry-meta {
+    display:none;
+  }
+
+  .entry-title {
+    color:$red;
+    text-shadow:none;
+    text-transform: none;
+    @include rem(font-size, 40px);
+  }
+
+  .site-inner h2 {
+    border-top:1px solid $red;
+    padding-top:30px;
+  }
+
+  .post-single-kvc--long-description {
+    margin-top:58px;
+  }
+
+  .post-single-kvc--event-details {
+    margin-bottom:30px;
+    margin-top:30px;
+
+    p {
+      margin-bottom:.25em;
+    }
+
+    .button {
+      display:inline-block;
+      margin-top:28px;
+    }
+  }
+
+}

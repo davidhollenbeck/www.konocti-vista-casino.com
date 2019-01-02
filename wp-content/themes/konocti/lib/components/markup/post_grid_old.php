@@ -35,9 +35,9 @@ function post_grid( $options, $type='default' ) {
 
         $posts = \get_posts(array(
             'posts_per_page'	=> -1,
-            'post_type'			=> 'event',
-            'meta_key'			=> 'date',
-            'orderby'	=> 'meta_value_num',
+            'post_type'			=> 'product',
+            //'meta_key'			=> 'date',
+            //'orderby'	=> 'meta_value_num',
             'order'		=> 'ASC'
         ));
     }
@@ -59,12 +59,13 @@ function post_grid( $options, $type='default' ) {
 
             $group = get_field( 'event', $post );
             $date_picker = get_field( 'date', $post );
+            //d($date_picker);
             $day = $dowMap[substr ($date_picker, -1 )];
             $date_picker = substr( $date_picker, 0, 8 );
             $date = ltrim( substr( $date_picker, -2, 2 ), '0' );
             $month = $moMap[ltrim( substr ($date_picker, -4, 2 ), '0' )];
 
-        ?>
+            ?>
 
             <div class="<?php if ( $i % 2 == 0 ) { echo 'first '; } ?>one-half post-grid__block">
                 <div class="post-grid__date-box">
@@ -79,14 +80,14 @@ function post_grid( $options, $type='default' ) {
 
                     <a href="<?php echo \get_permalink( $group['ticket'][0] ); ?>" class="button button--primary">Buy Tickets</a>
                 <?php else: ?>
-                    <a href="<?php echo get_the_permalink( $post ); ?>" class="button button--secondary">Details</a>
+                    <a href="#" class="button button--secondary">Details</a>
                 <?php endif; ?>
             </div>
 
-        <?php
+            <?php
 
-        $i++;
-        wp_reset_postdata();
+            $i++;
+            wp_reset_postdata();
         endforeach;
 
         echo '</div>';
@@ -94,8 +95,8 @@ function post_grid( $options, $type='default' ) {
         wp_reset_postdata();
     else:
         ?> <div class="row row--padding post-grid">
-                <h2>No upcoming events found.</h2>
-            </div>
-        <?php
+        <h2>No upcoming events found.</h2>
+    </div>
+    <?php
     endif;
 }

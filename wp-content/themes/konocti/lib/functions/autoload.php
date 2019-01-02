@@ -51,7 +51,8 @@ function load_nonadmin_files() {
         'components/markup/hero.php',
         'components/markup/post_grid.php',
         'components/calendar/calendar.php',
-        //'components/calendar/json.php',
+        'components/markup/post_single.php',
+        'woocommerce/wc_functions.php',
 	);
 
 	load_specified_files( $filenames );

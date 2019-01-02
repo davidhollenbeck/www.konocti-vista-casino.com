@@ -77,7 +77,8 @@
 }
 
 .woocommerce button.button,
-.woocommerce button.button.alt {
+.woocommerce button.button.alt,
+.woocommerce a.button.alt {
   background: $red-gradient !important;
   border: 0;
   color: $button--color;
@@ -100,4 +101,34 @@
 .woocommerce button.button.alt:focus {
   background-color: $button--hover-background-color !important;
   color: $button--hover-color !important;
+}
+
+.woocommerce-cart {
+  .entry-title {
+    color:$red;
+    text-shadow:none;
+    text-transform: none;
+    @include rem(font-size, 40px);
+  }
+
+  table.cart td.actions .coupon .input-text {
+    width:120px;
+  }
+
+  .cart button.button {
+    color:#fff;
+  }
+}
+
+.woocommerce-checkout {
+  .entry-title {
+    color:$red;
+    text-shadow:none;
+    text-transform: none;
+    @include rem(font-size, 40px);
+  }
+
+  .entry-content ul > li {
+    list-style-type:none;
+  }
 }
